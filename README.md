@@ -1,163 +1,134 @@
-# C++ Experiment 15: Recursion in C++
----
-
-## Aim  
-To understand the concept of Inheritance in C++ and its applications:
-1. Demonstrating reusability of code through inheritance.
-2. Studying different types of inheritance (single, multiple, multilevel, hierarchical, hybrid).
-3. Understanding modes of inheritance (public, protected, private).
-4. Observing how base class constructors and members are accessed in derived classes.
-
+# Experiment 15 : Recursion in C++
 
 ---
 
-## Tool Used  
-VS Code or Programiz Online C++ Compiler.
+## Aim
+- To study and implement **Recursion in C++**.  
+- To understand how functions can **call themselves** to solve problems.  
+- To demonstrate the use of recursion in **mathematical and algorithmic problems**.  
 
 ---
 
-## Objectives  
-- To learn the concept of base class and derived class.
-- To study how properties and methods of one class can be reused in another.
-- To explore public, protected, and private inheritance modes.
-- To identify advantages of inheritance in terms of reusability and extensibility.
-- To classify different types of inheritance in C++.
-  
+## Tools Used
+- VS Code  
+- Online C++ Compiler
+
+---
+
+## Objectives
+- To understand the concept of **recursive functions**.  
+- To identify **base case** and **recursive case** in a function.  
+- To implement recursion for **factorial, Fibonacci series, and other examples**.  
+- To learn the **advantages and disadvantages** of recursion.  
+- To explore **tail recursion** and **non-tail recursion**.  
+
 ---
 
 ## Theory
 
-### Why C++ is More Efficient than C?
+### What is Recursion?
 ---
 
-- C++ supports Object-Oriented Programming (OOP), which improves code reusability and maintainability.
-- Built-in string class makes string manipulation easier than C-style strings.
-- Rich Standard Template Library (STL) reduces coding time.
-- Better type safety compared to C.
-- Function overloading and templates provide flexibility.
-- Memory management tools like RAII help prevent leaks.
-- Direct support for function overloading and inline functions improves efficiency.
+- Recursion is a programming technique where a function **calls itself** to solve smaller instances of a problem.  
+- It simplifies complex problems by dividing them into **sub-problems**.  
 
 ---
 
-### What is inheritance?  
+### Key Concepts
 ---
 
-1. Inheritance is a feature of Object-Oriented Programming (OOP) in which a new class (derived/child class) acquires the
-properties and functionalities of an existing class (base/parent class).
-2. It helps in code reusability, since we don’t have to write the same code multiple times.
-3. Inheritance establishes a relationship between classes, enabling hierarchies like parent → child.
-4. It forms the basis of polymorphism, where derived classes can redefine behaviors of base classes.
-
----
-
-### What is inheritance important?  
----
-
-1. Promotes code reusability – existing code can be reused in new applications.
-2. Enhances maintainability – changes in base class automatically affect derived classes.
-3. Supports polymorphism – allows function overriding and runtime flexibility.
-4. Provides logical class hierarchies – represents real-world relationships (e.g., Vehicle → Car → SportsCar).
-5. Saves time and effort in development.
+- **Base Case:** The condition that terminates recursion.  
+- **Recursive Case:** The part where the function calls itself with modified arguments.  
+- **Call Stack:** Each recursive call is stored on the stack; execution resumes after the base case is reached.  
 
 ---
 
-### Syntax:###  
-```
-class Base {
-    // base members
-};
-
-class Derived : access-specifier Base {
-    // new or extended members
-};
-
-```
-
-### Modes of Inheritance  
+### Types of Recursion
 ---
 
-Inheritance in C++ depends on the access specifier used:
-
-Public Inheritance-
-1. Public members of base → Public in derived.
-2. Protected members of base → Protected in derived.
-3. Private members → Not accessible in derived.
-
-Protected Inheritance-
-1. Public and Protected members of base → Protected in derived.
-2. Private members → Not accessible in derived.
-
-Private Inheritance-
-1. Public and Protected members of base → Private in derived.
-2. Private members → Not accessible in derived.
+- **Direct Recursion:** Function calls itself directly.  
+- **Indirect Recursion:** Function A calls Function B, which eventually calls Function A.  
+- **Tail Recursion:** Recursive call is the **last statement** in the function.  
+- **Non-Tail Recursion:** Recursive call is followed by additional operations.  
 
 ---
 
-### Types of inheritance  
+### Why Recursion is Useful?
 ---
 
-1. Single inheritance-
-In single inheritance, a class is allowed to inherit from only one class. i.e. one subclass is inherited by one base class only.
-2. Multiple inheritance-
-Multiple Inheritance is a feature of C++ where a class can inherit from more than one class. i.e one subclass is inherited from more than one base class.
-3. Multilevel inheritance-
-In this type of inheritance, a derived class is created from another derived class.
-4. Hierarchical Inheritance-
-In this type of inheritance, more than one subclass is inherited from a single base class. i.e. more than one derived class is created from a single base class.
+- Simplifies **algorithm design** for problems like trees, graphs, and divide-and-conquer.  
+- Makes code **cleaner** and easier to read.  
+- Enables **backtracking** for puzzles like N-Queens or maze problems.  
+- Allows natural solution for **mathematical series** (factorial, Fibonacci, etc.).  
 
 ---
 
-### Pointer arithmetic rules  
+## Advantages of Recursion
 ---
 
-- Incrementing a pointer moves it to the next element of its type (ptr++).
-- Subtracting two pointers gives the number of elements between them.
-- Pointer arithmetic is valid only within the same array or memory block.
-
----
-
-### Advantages of inheritance 
----
-
-- Code Reusability – Reuse base class functionality in derived classes.
-- Extensibility – Add new features to existing classes without rewriting.
-- Saves Time & Effort – Reduces duplication.
-- Supports Polymorphism – Enables function overriding and dynamic behavior.
-- Organized Structure – Represents real-world hierarchies clearly.
+- Reduces code complexity for problems with repetitive sub-problems.  
+- Supports elegant solutions for mathematical and data structure problems.  
+- Useful in **tree and graph traversals**.  
+- Easier to implement **divide-and-conquer algorithms**.  
 
 ---
 
-### Disadvantages of inheritance
+## Disadvantages of Recursion
 ---
 
-- Increased Complexity – Multiple levels of inheritance may be difficult to manage.
-- Tight Coupling – Derived class depends heavily on base class.
-- Unexpected Behavior – Overridden methods may cause errors if not carefully implemented.
-- Performance Issues – Virtual function tables (used in polymorphism) add overhead.
-- Not Always the Best Choice – Sometimes composition (has-a relationship) is better than inheritance (is-a relationship).
-  
+- High memory usage due to call stack.  
+- Risk of stack overflow for deep recursion.  
+- Sometimes slower than iterative solutions.  
+- May be harder to debug in complex scenarios.  
+
 ---
 
+## Algorithm
 
-
-## Concepts Used  
+### Program 1: Factorial of a Number
 ---
 
-- Base and derived class relationships.
-- Modes of inheritance (public, protected, private).
-- Types of inheritance (single, multiple, multilevel, hierarchical, hybrid).
-- Constructor and destructor call order in inheritance.
-- Function overriding and polymorphism.
+1. Start the program.  
+2. Declare integer `n`.  
+3. Prompt user to enter a number.  
+4. Read `n`.  
+5. Define a recursive function `factorial(n)`:  
+   - If `n == 0` → return 1 (base case).  
+   - Else → return `n * factorial(n-1)` (recursive case).  
+6. Call the factorial function and display the result.  
+7. End the program.
+
+---  
+
+
+## Applications
+---
+
+- **Mathematical problems:** Factorial, Fibonacci, GCD  
+- **Data structures:** Tree and graph traversal  
+- **Algorithms:** Merge Sort, Quick Sort  
+- **Puzzle solving:** Tower of Hanoi, N-Queens  
+- **Backtracking problems:** Maze solving, Sudoku  
+
+---
+
+## Concepts Used
+---
+
+- Recursive function calls.  
+- Base case and recursive case.  
+- Call stack mechanism.  
+- Mathematical problem solving using recursion.  
 
 ---
 
 ## Conclusion
 ---
 
-- In this experiment, we studied Inheritance in C++, including its types and modes.
-- We understood how one class can acquire the properties of another, improving reusability and extensibility.
-- We also explored the advantages and limitations of inheritance.
-- Overall, inheritance is a powerful concept in OOP that helps in writing modular, maintainable, and reusable code.
+- Recursion is a powerful programming technique where a function calls itself to solve a problem.
+- It helps in breaking complex problems into smaller, manageable sub-problems.
+- Recursive solutions are often cleaner and easier to understand than iterative ones, especially for problems like factorial, Fibonacci series, tree traversal, and backtracking puzzles.
+- Proper use of base case and recursive case is essential to prevent infinite recursion and stack overflow.
+- While recursion simplifies problem-solving and code readability, it may have higher memory usage and sometimes lower performance compared to iteration.
 
 ---
