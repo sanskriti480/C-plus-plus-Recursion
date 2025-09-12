@@ -26,6 +26,19 @@
 
 ## Theory
 
+### Why C++ is More Efficient than C?
+---
+
+- C++ supports Object-Oriented Programming (OOP), which improves code reusability and maintainability.
+- Built-in string class makes string manipulation easier than C-style strings.
+- Rich Standard Template Library (STL) reduces coding time.
+- Better type safety compared to C.
+- Function overloading and templates provide flexibility.
+- Memory management tools like RAII help prevent leaks.
+- Direct support for function overloading and inline functions improves efficiency.
+
+---
+
 ### What is Recursion?
 ---
 
@@ -85,7 +98,7 @@
 
 ## Algorithm
 
-### Program 1: Factorial of a Number
+### Factorial of a Number
 ---
 
 1. Start the program.  
