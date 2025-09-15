@@ -111,6 +111,24 @@
 6. Call the factorial function and display the result.  
 7. End the program.
 
+### Addition of integers upto n
+
+1. Start the program.
+2. Define function sumup(int n):
+   - If n < 0,
+       - Print error message → "Error: Sum is not defined for negative numbers.".
+       - Return 0.
+   - If n <= 1, return 1.
+   - Otherwise, return n + sumup(n - 1) (recursive call).
+3. In main() function:
+   - Declare variable num.
+   - Prompt user → "Enter a number: ".
+   - Take input into num.
+4. Call function result = sumup(num).
+5. If num >= 0, print the sum:
+   - "Sum of numbers from 1 to num is result".
+6. End program.
+
 ---  
 
 
