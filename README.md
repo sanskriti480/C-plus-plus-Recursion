@@ -129,6 +129,30 @@
    - "Sum of numbers from 1 to num is result".
 6. End program.
 
+### Reverse number
+
+1. Start
+2. Input an integer number from the user.
+3. Call the function num_reverse(number) to reverse the digits.
+4. In the function num_reverse(int num):
+   - If num > 0
+      - Find the last digit → digit = num % 10.
+      - Print digit.
+      - Recursively call num_reverse(num / 10) to process the remaining digits.
+   - Else (base case):
+      - Return (stop recursion).
+5. Display the reversed number on the screen.
+6. End
+
+### String reversal
+
+1. Start
+2. Input a string str from the user.
+3. Find the length of the string → length = str.length()
+4. Call the recursive function reverse(str, length - 1)
+   - The function returns the reversed string.
+5. Display the reversed string.
+
 ---  
 
 
